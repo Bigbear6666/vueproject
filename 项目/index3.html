@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的文档</title>
+	<meta name="keywords" content="xiongda,个人文档">
+	<meta name="author" content="熊大">
+	<meta name="description" content="我不怕你不喜欢我，就怕你讨厌我了">
+	<link rel="stylesheet" href="css/index3.css">
+	<link rel="stylesheet" href="http://wuxiongda.top/css/bootstrap.css">
+</head>
+<body>
+	<!-- 我的文档 -->
+	<div id="new_top" v-html="head" class="container"></div>
+	<div id="top" class="top" v-html="tp"></div>
+	<div id="bglist" class="bglist" v-html="bg"></div>
+	<div id="null" class="null" v-html="nul"></div>
+	<div id="null2" class="null2" v-html="nul2"></div>
+	<div class="bggray" id="bggray" v-html="bgray"></div>
+	<div class="bgtable clearfix" id="bgtable" v-html="bgt"></div>
+	<div id="bgp" class="bgp" v-html="bp"></div>
+	<div class="ft"></div>
+	<div class="ftform" id="ftform" v-html="ftf"></div>
+	<div class="bottom clear" id="bottom">
+        <div class="tab-tit">
+            <a href="javascript:;" @click="curId=0" :class="{'cur':curId===0}">
+            		北京            </a>
+            |
+            <a href="javascript:;" @click="curId=1" :class="{'cur':curId===1}">
+                上海浦东
+            </a>
+            |
+            <a href="javascript:;" @click="curId=2" :class="{'cur':curId===2}">
+                上海徐汇
+            </a>
+            |
+            <a href="javascript:;" @click="curId=3" :class="{'cur':curId===3}">
+                广州
+            </a>
+            |
+            <a href="javascript:;" @click="curId=4" :class="{'cur':curId===4}">
+                深圳罗湖
+            </a>
+            |
+            <a href="javascript:;" @click="curId=5" :class="{'cur':curId===5}">
+                深圳南山
+            </a>
+            |
+            <a href="javascript:;" @click="curId=6" :class="{'cur':curId===6}">
+                杭州
+            </a>
+            |
+            <a href="javascript:;" @click="curId=7" :class="{'cur':curId===7}">
+                成都
+            </a>
+            |
+            <a href="javascript:;" @click="curId=8" :class="{'cur':curId===8}">
+                武汉
+            </a>
+            |
+            <a href="javascript:;" @click="curId=9" :class="{'cur':curId===9}">
+                西安
+            </a>
+            |
+            <a href="javascript:;" @click="curId=10" :class="{'cur':curId===10}">
+                重庆
+            </a>
+            |
+            <a href="javascript:;" @click="curId=11" :class="{'cur':curId===11}">
+                南京
+            </a>
+            |
+            <a href="javascript:;" @click="curId=12" :class="{'cur':curId===12}">
+                厦门
+            </a>
+            |
+            <a href="javascript:;" @click="curId=13" :class="{'cur':curId===13}">
+                郑州
+            </a>
+            |
+            <a href="javascript:;" @click="curId=14" :class="{'cur':curId===14}">
+                济南
+            </a>
+        </div>
+		<div class="tab-con">
+			<div v-show="curId===0">
+				<p>
+					地址：北京市海淀区杏石口路81号火星时代大厦
+				</p>
+				<p>
+					电话：400-810-1418
+				</p>
+			</div>
+			<div v-show="curId===1">
+				<p>
+					地址：上海市浦东新区张江高科技园博霞路66号
+				</p>
+				<p>
+					电话：400-621-1416
+				</p>
+			</div>
+			<div v-show="curId===2">
+				<p>
+					地址：上海市徐汇区虹梅路2071号远中产业园四期1号楼一层
+				</p>
+				<p>
+					电话：400-689-8925
+				</p>
+			</div>
+			<div v-show="curId===3">
+				<p>
+					地址：广州市天河区科韵路20号软银数码港大厦一层
+				</p>
+				<p>
+					电话：400-811-3906
+				</p>
+			</div>
+			<div v-show="curId===4">
+				<p>
+					地址：深圳市罗湖区湖贝路2号锦湖大厦5楼
+				</p>
+				<p>
+					电话：400-811-3907
+				</p>
+			</div>
+			<div v-show="curId===5">
+				<p>
+					地址：深圳市南山区西丽街道沙河西路3151号新兴产业园（健兴科技大厦）B栋三层
+				</p>
+				<p>
+					电话：400-081-5191
+				</p>
+			</div>
+			<div v-show="curId===6">
+				<p>
+					地址：杭州市天目山路226号网新大厦（中融大厦）1001-1101
+				</p>
+				<p>
+					电话：400-811-3908
+				</p>
+			</div>
+			<div v-show="curId===7">
+				<p>
+					地址：成都市锦江区一环路东五段87号阳光新业大厦11层
+				</p>
+				<p>
+					电话：400-811-3905
+				</p>
+			</div>
+			<div v-show="curId===8">
+				<p>
+					地址：武汉市东湖高新技术开发区关山大道光谷创意大厦C座5层
+				</p>
+				<p>
+					电话：400-811-3903
+				</p>
+			</div>
+			<div v-show="curId===9">
+				<p>
+					地址：西安市雁塔区科技二路文理学院北门外东侧3楼
+				</p>
+				<p>
+					电话：400-811-3912
+				</p>
+			</div>
+			<div v-show="curId===10">
+				<p>
+					地址：重庆市南岸区学府大道33号招商局大厦4层（重庆工商大学旁）
+				</p>
+				<p>
+					电话：400-811-3915
+				</p>
+			</div>
+			<div v-show="curId===11">
+				<p>
+					地址：南京市建邺区汉中门大街151号西城广场A口5层
+				</p>
+				<p>
+					电话：400-811-3913
+				</p>
+			</div>
+			<div v-show="curId===12">
+				<p>
+					地址：厦门市湖里区圆山南路898号楼玉岭大厦一层
+				</p>
+				<p>
+					电话：400-083-5315
+				</p>
+			</div>
+			<div v-show="curId===13">
+				<p>
+					地址：河南省郑州市二七区航海中路60号海为科技园C区 3楼
+				</p>
+				<p>
+					电话：400-081-5208
+				</p>
+			</div>
+			<div v-show="curId===14">
+				<p>
+					地址：济南市历下区花园路历下软件园D座4层
+				</p>
+				<p>
+					电话：400-081-5209
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="footer" v-html="foo" class="footer"></div>
+	<script src="http://wuxiongda.top/vue/js/vue.js"></script>
+	<script>
+		let vm = new Vue({
+			el : '#new_top',
+			data : {
+				'head' : ' <div class="w1200 menu mheader">									<p class="logo">												<a href="javascript:;">											<img src="images/logo2.png" alt="" />					</a>													</p>														<ul class="nav1">												<li class="col-xs-">															<a href="javascript:;" class="active">							首页													</a>													</li>														<li class="col-xs-">															<a href="javascript:;">											课程													</a>													</li>														<li class="col-xs-">															<a href="javascript:;">											服务													</a>													</li>														<li class="col-xs-">															<a href="javascript:;">											作品													</a>													</li>														<li class="col-xs-">															<a href="javascript:;">											视频													</a>													</li>														<li class="col-xs-">															<a href="javascript:;">											招聘													</a>													</li>													</ul>														<div class="user">												<div class="item login show">									<a href="javascript:;">											登录													</a>														<b>																|														</b>														<a href="javascript:;">											注册													</a>													</div>													</div>													</div>'
+			}
+		});
+
+		let t = new Vue({
+			el : '#top',
+			data : {
+				tp : ' <div class="warp">										<div class="forml">										<form action="" class="topform">						<input type="text" class="mobile" placeholder="填写手机号码，领取助学金"/>							<input type="button" class="topsub" />			</form>											</div>											</div>'
+			}
+		});
+
+		let bg = new Vue({
+			el : '#bglist',
+			data : {
+				bg : ' <div class="seat center-block">							<h1 class="tit1">										全国校区开课时间表								</h1>												<h2 class="tit2 center-block">										~ 抓紧抢座位 ~										</h2>												<div class="seattab">									<span class="active">									北京											</span>												|													<span>													上海浦东										</span>												|													<span>													上海徐汇										</span>												|													<span>													广州											</span>												|													<span>													深圳罗湖										</span>												|													<span>													深圳南山										</span>												|													<span>													杭州											</span>												|													<span>													成都											</span>												|													<span>													武汉											</span>												|													<span>													西安											</span>												|													<span>													重庆											</span>												|													<span>													南京											</span>												|													<span>													郑州											</span>												|													<span>													济南											</span>											</div>												<div class="seatcontent center-block"><ul><li class="c1"><span class="w1">【北京】</span><span>web前端+全栈工程师</span><span class="smbt"><a href="javascript:;" class="hxsd-webim-click">抢座</a></span><img src="images3/8.png" alt=""></li><li class="c2"><span class="w1">【北京】</span><span>web前端+全栈工程师</span><span class="smbt"><a href="javascript:;" class="hxsd-webim-click">抢座</a></span></li><li class="c3"><span class="w1">【北京】</span><span>web前端+全栈工程师</span><span class="smbt"><a href="javascript:;" class="hxsd-webim-click">抢座</a></span><img src="images3/5.png" alt=""></li><li class="c4"><span class="w1">【北京】</span><span>web前端+全栈工程师</span><span class="smbt"><a href="javascript:;" class="hxsd-webim-click">抢座</a></span></li><li class="c13"><span class="w1">【北京】</span><span>web前端+全栈工程师</span><span class="smbt"><a href="javascript:;" class="hxsd-webim-click">	抢座</a></span></li></ul><ul><li class="c5"><span class="w1">【北京】</span><span>web前端+全栈工程师</span><span class="smbt"><a href="javascript:;" class="hxsd-webim-click">	抢座</a></span></li><li class="c6"><span class="w1">【北京】</span><span>web前端+全栈工程师</span><span class="smbt"><a href="javascript:;" class="hxsd-webim-click">	抢座</a></span><img src="images3/4.png" alt=""></li><li class="c7"><span class="w1">【北京】</span><span>web前端+全栈工程师</span><span class="smbt"><a href="javascript:;" class="hxsd-webim-click">	抢座</a></span><img src="images3/7.png" alt=""></li><li class="c8"><span class="w1">【北京】</span><span>web前端+全栈工程师</span><span class="smbt"><a href="javascript:;" class="hxsd-webim-click">	抢座</a></span><img src="images3/5.png" alt=""></li><li class="c14"><span class="w1">【北京】</span><span>web前端+全栈工程师</span><span class="smbt"><a href="javascript:;" class="hxsd-webim-click">	抢座</a></span></li></ul><ul><li class="c9"><span class="w1">【北京】</span><span>web前端+全栈工程师</span><span class="smbt"><a href="javascript:;" class="hxsd-webim-click">	抢座</a></span></li><li class="c10"><span class="w1">【北京】</span><span>web前端+全栈工程师</span><span class="smbt"><a href="javascript:;" class="hxsd-webim-click">	抢座</a></span></li><li class="c11"><span class="w1">【北京】</span><span>web前端+全栈工程师</span><span class="smbt"><a href="javascript:;" class="hxsd-webim-click">	抢座</a></span></li><li class="c12"><span class="w1">【北京】</span><span>web前端+全栈工程师</span><span class="smbt"><a href="javascript:;" class="hxsd-webim-click">	抢座</a></span><img src="images3/6.png" alt=""></li></ul></div></div>'
+			}
+		});
+
+		let nl = new Vue({
+			el : '#null',
+			data : {
+				nul :  ' <h1 class="tit1" style="padding: 70px 0 40px">'+
+							'web前端能做什么'+
+						'</h1>'+
+						'<p class="text-center pb50 ct fz18">'+
+							'为什么那么多人学前端，连后端/程序员都转行学前端'+
+						'</p>'+
+						'<div class="can">'+
+							'<img src="images3/can1.jpg" alt="" class="fl" />'+
+							'<div class="fr tl">'+
+								'<h2>'+
+									'<img src="images3/n1.png" alt="" />'+
+								'</h2>'+
+								'<p>'+
+									'学习后可制作个人主页，可开发大型信息量网站，'+
+									'<br />'+
+									'如：淘宝、京东等。同时对与企业网站制作可独立'+
+									'<br />'+
+									'完成，赚取额外费用。'+
+								'</p>'+
+							'</div>'+
+						'</div>'+
+						'<div class="can">'+
+							'<div class="fl tr">'+
+								'<h2>'+
+									'<img src="images3/n2.png" alt="" />'+
+									'编程'+
+								'</h2>'+
+								'<p>'+
+									'学习行业最新技术应用，紧跟BAT级企业潮流技术，'+
+									'<br />'+
+									'实现高薪就业。'+
+								'</p>'+
+							'</div>'+
+							'<img src="images3/can2.jpg" alt="" class="fr" />'+
+						'</div>'+
+						'<div class="can">'+
+							'<img src="images3/can3.jpg" alt="" class="fl" />'+
+							'<div class="fr tl">'+
+								'<h2>'+
+									'<img src="images3/n3.png" alt="" />'+
+								'</h2>'+
+								'<p>'+
+									'应用软件界面前端信息的展示与交互程序设计应用'+
+									'<br />'+
+									'，通过对各页面的关联程序嵌入，使用户对APP软'+
+									'<br />'+
+									'件的操作灵活应用。'+
+								'</p>'+
+							'</div>'+
+						'</div>'+
+						'<div class="can">'+
+							'<div class="fl tr">'+
+								'<h2>'+
+									'<img src="images3/n4.png" alt="" />'+
+									'APP应用程序'+
+								'</h2>'+
+								'<p>'+
+									'应用软件界面前端信息的展示与交互程序设计应用'+
+									'<br />'+
+									'，通过对各页面的关联程序嵌入，使用户对APP软'+
+									'<br />'+
+									'件的操作灵活应用。'+
+								'</p>'+
+							'</div>'+
+							'<img src="images3/can4.jpg" alt="" class="fr" />'+
+						'</div>'
+			}
+		});
+
+		let nll = new Vue({
+			el : '#null2',
+			data : {
+				nul2 :  '<div class="wrap">'+
+							'<h1 class="tit1" style="padding: 70px 0 40px">'+
+								'全栈工程师人才缺口巨大'+
+								'<br />'+
+								'企业高薪重金招人'+
+							'</h1>'+
+							'<h2 class="tit2">'+
+								'1.企业高薪诚聘'+
+							'</h2>'+
+							'<div class="warp text-center">'+
+								'<img src="images3/a1.jpg" alt="" class="pt50 pb40" />'+
+								'<h2 class="tit2 fl col-6">'+
+									'2.行业薪资调研'+
+								'</h2>'+
+								'<h2 class="tit2 fl col-6">'+
+									'3.薪资变化数据表'+
+								'</h2>'+
+								'<img src="images3/a2.jpg" alt="" class="pt50" />'+
+								'<h2 class="tit2 pad30">'+
+									'4.就业范围'+
+								'</h2>'+
+								'<p class="text-center ct">'+
+									'BAT名企、创业企业、中小型企业、'+
+									'<br />'+
+									'二三线城市均需要Web前端+全栈工程师，尤以二三线城市及创业型企业对此类全能型人才急需，并开出较高薪资聘用。'+
+								'</p>'+
+								'<img src="images3/a3.jpg" alt="" class="pb50" />'+
+							'</div>'+
+						'</div>'
+			}
+		});
+
+		let fo = new Vue({
+			el : '#footer',
+			data : {
+				foo : ' <div class="f-w">											<div class="f-tit">											<p class="logo" align="left">								<img src="images1/logo2.png" alt="" />				</p>													<ul>														<li>														<a href="javascript:;">										关于我们											</a>												</li>													<li>														<a href="javascript:;">										人才合作											</a>												</li>													<li>														<a href="javascript:;">										就业报告											</a>												</li>												</ul>												</div>													<div class="contact">										<div class="code">											<img src="images1/newapp.jpg" alt="" />					<p>															扫描下载APP											</p>												</div>													<div class="code2">											<img src="images1/gz.jpg" alt="" />						<p>															扫一扫关注我们										</p>												</div>													<ul>														<li>														<a href="javascript:;" class="app">							<p>															移动端												</p>												</a>												</li>													<li>														<a href="javascript:;" class="wx">							<p>															微信												</p>												</a>												</li>													<li>														<a href="javascript:;" class="wb">							<p>															微博												</p>												</a>												</li>													<li>														<a href="javascript:;" class="tb">							<p>															贴吧												</p>												</a>												</li>												</ul>												</div>													<div class="f-line"></div>								<div class="phone">											<span>														监督电话：400-110-6199								</span>													<span>														火星时代校企合作热线：010-59833550					</span>													<span>														咨询热线：400-810-1418								</span>												</div>													<div class="cc">											©2011, www.hxsd.com 北京火星时代网络技术有限公司 电信与信息服务业务经营许可证070738号 京ICP备09083002号-6 京ICP证061064号 京公网安备11010502025474							</div>													<div class="outlink">										<ul>														<li>														<a href="javascript:;">										友情链接											</a>												</li>												</ul>												</div>												</div>'
+			}
+		});
+	</script>
+	<script>
+		let b = new Vue({
+			el : '#bggray',
+			data : {
+				bgray :  	'<span class="tri center-block"></span>'+
+							'<h1 class="tit1" style="padding: 70px 0 40px;">'+
+								'web前端+全栈工程师'+
+							'</h1>'+
+							'<p class="text-center fz18 orange">'+
+								'就业、转行、升职、加薪不再成难事'+
+							'</p>'+
+							'<p class="fz32 text-center pad20">'+
+								'什么样的人适合学'+
+							'</p>'+
+							'<div class="wrap">'+
+								'<ul class="contentfl clearfix list1 center-block">'+
+									'<li>'+
+										'<img src="images3/p1.jpg" alt="" />'+
+										'<p class="fz24">'+
+											'想拿高薪'+
+										'</p>'+
+										'<p class="fz16">'+
+											'有计算机基础，对代码有一定了解，并想从事该行业人群。'+
+										'</p>'+
+									'</li>'+
+									'<li>'+
+										'<img src="images3/p2.jpg" alt="" />'+
+										'<p class="fz24">'+
+											'前端/后端相融'+
+										'</p>'+
+										'<p class="fz16">'+
+											'已从事前端或后端工作想学习更多专业知识，对技能提升、薪资加成能力。'+
+										'</p>'+
+									'</li>'+
+									'<li class="mgr0">'+
+										'<img src="images3/p3.jpg" alt="" />'+
+										'<p class="fz24">'+
+											'想留在老家发展'+
+										'</p>'+
+										'<p class="fz16">'+
+											'互联网时代已使二三线城市企业得到巨大发展及人才需求，面对一线城市生活消费压力，回老家发展已成为很多人的选择。'+
+										'</p>'+
+									'</li>'+
+								'</ul>'+
+								'<div class="link clear pt30">'+
+									'<a href="javascript:;" class="hxsd-webim-click">'+
+										'我适合学吗？'+
+									'</a>'+
+								'</div>'+
+								'<h1 class="tit1" style="padding: 70px 0 40px;">'+
+									'一次改变胜过犹豫不决'+
+								'</h1>'+
+								'<p class="fz18 text-center pb50">'+
+									'高薪岗位随时恭候　就看你怎么选择'+
+								'</p>'+
+								'<ul class="list2 contentfl clearfix text-center">'+
+									'<li>'+
+										'<img src="images3/st1.jpg" alt="" />'+
+										'<p>'+
+											'<span class="fz24">'+
+												'谭雪玲'+
+											'</span>'+
+											'<span class="fz16">'+
+												'（深圳罗湖中心）'+
+											'</span>'+
+										'</p>'+
+										'<p class="fz16">'+
+											'1603期'+
+										'</p>'+
+										'<p>'+
+											'入职企业：深圳华夏通宝云知科技'+
+										'</p>'+
+										'<div class="center-block fz16 salary">'+
+											'月薪：16000'+
+										'</div>'+
+									'</li>'+
+									'<li>'+
+										'<img src="images3/st2.jpg" alt="" />'+
+										'<p>'+
+											'<span class="fz24">'+
+												'谭雪玲'+
+											'</span>'+
+											'<span class="fz16">'+
+												'（深圳罗湖中心）'+
+											'</span>'+
+										'</p>'+
+										'<p class="fz16">'+
+											'1603期'+
+										'</p>'+
+										'<p>'+
+											'入职企业：深圳华夏通宝云知科技'+
+										'</p>'+
+										'<div class="center-block fz16 salary">'+
+											'月薪：16000'+
+										'</div>'+
+									'</li>'+
+									'<li>'+
+										'<img src="images3/st3.jpg" alt="" />'+
+										'<p>'+
+											'<span class="fz24">'+
+												'谭雪玲'+
+											'</span>'+
+											'<span class="fz16">'+
+												'（深圳罗湖中心）'+
+											'</span>'+
+										'</p>'+
+										'<p class="fz16">'+
+											'1603期'+
+										'</p>'+
+										'<p>'+
+											'入职企业：深圳华夏通宝云知科技'+
+										'</p>'+
+										'<div class="center-block fz16 salary">'+
+											'月薪：16000'+
+										'</div>'+
+									'</li>'+
+									'<li>'+
+										'<img src="images3/st4.jpg" alt="" />'+
+										'<p>'+
+											'<span class="fz24">'+
+												'谭雪玲'+
+											'</span>'+
+											'<span class="fz16">'+
+												'（深圳罗湖中心）'+
+											'</span>'+
+										'</p>'+
+										'<p class="fz16">'+
+											'1603期'+
+										'</p>'+
+										'<p>'+
+											'入职企业：深圳华夏通宝云知科技'+
+										'</p>'+
+										'<div class="center-block fz16 salary">'+
+											'月薪：16000'+
+										'</div>'+
+									'</li>'+
+									'<li>'+
+										'<img src="images3/st5.jpg" alt="" />'+
+										'<p>'+
+											'<span class="fz24">'+
+												'谭雪玲'+
+											'</span>'+
+											'<span class="fz16">'+
+												'（深圳罗湖中心）'+
+											'</span>'+
+										'</p>'+
+										'<p class="fz16">'+
+											'1603期'+
+										'</p>'+
+										'<p>'+
+											'入职企业：深圳华夏通宝云知科技'+
+										'</p>'+
+										'<div class="center-block fz16 salary">'+
+											'月薪：16000'+
+										'</div>'+
+									'</li>'+
+									'<li>'+
+										'<img src="images3/st6.jpg" alt="" />'+
+										'<p>'+
+											'<span class="fz24">'+
+												'谭雪玲'+
+											'</span>'+
+											'<span class="fz16">'+
+												'（深圳罗湖中心）'+
+											'</span>'+
+										'</p>'+
+										'<p class="fz16">'+
+											'1603期'+
+										'</p>'+
+										'<p>'+
+											'入职企业：深圳华夏通宝云知科技'+
+										'</p>'+
+										'<div class="center-block fz16 salary">'+
+											'月薪：16000'+
+										'</div>'+
+									'</li>'+
+									'<li>'+
+										'<img src="images3/st7.jpg" alt="" />'+
+										'<p>'+
+											'<span class="fz24">'+
+												'谭雪玲'+
+											'</span>'+
+											'<span class="fz16">'+
+												'（深圳罗湖中心）'+
+											'</span>'+
+										'</p>'+
+										'<p class="fz16">'+
+											'1603期'+
+										'</p>'+
+										'<p>'+
+											'入职企业：深圳华夏通宝云知科技'+
+										'</p>'+
+										'<div class="center-block fz16 salary">'+
+											'月薪：16000'+
+										'</div>'+
+									'</li>'+
+									'<li>'+
+										'<img src="images3/st8.jpg" alt="" />'+
+										'<p>'+
+											'<span class="fz24">'+
+												'谭雪玲'+
+											'</span>'+
+											'<span class="fz16">'+
+												'（深圳罗湖中心）'+
+											'</span>'+
+										'</p>'+
+										'<p class="fz16">'+
+											'1603期'+
+										'</p>'+
+										'<p>'+
+											'入职企业：深圳华夏通宝云知科技'+
+										'</p>'+
+										'<div class="center-block fz16 salary">'+
+											'月薪：16000'+
+										'</div>'+
+									'</li>'+
+									'<li>'+
+										'<img src="images3/st9.jpg" alt="" />'+
+										'<p>'+
+											'<span class="fz24">'+
+												'谭雪玲'+
+											'</span>'+
+											'<span class="fz16">'+
+												'（深圳罗湖中心）'+
+											'</span>'+
+										'</p>'+
+										'<p class="fz16">'+
+											'1603期'+
+										'</p>'+
+										'<p>'+
+											'入职企业：深圳华夏通宝云知科技'+
+										'</p>'+
+										'<div class="center-block fz16 salary">'+
+											'月薪：16000'+
+										'</div>'+
+									'</li>'+
+									'<li>'+
+										'<img src="images3/st10.jpg" alt="" />'+
+										'<p>'+
+											'<span class="fz24">'+
+												'谭雪玲'+
+											'</span>'+
+											'<span class="fz16">'+
+												'（深圳罗湖中心）'+
+											'</span>'+
+										'</p>'+
+										'<p class="fz16">'+
+											'1603期'+
+										'</p>'+
+										'<p>'+
+											'入职企业：深圳华夏通宝云知科技'+
+										'</p>'+
+										'<div class="center-block fz16 salary">'+
+											'月薪：16000'+
+										'</div>'+
+									'</li>'+
+									'<li>'+
+										'<img src="images3/st11.jpg" alt="" />'+
+										'<p>'+
+											'<span class="fz24">'+
+												'谭雪玲'+
+											'</span>'+
+											'<span class="fz16">'+
+												'（深圳罗湖中心）'+
+											'</span>'+
+										'</p>'+
+										'<p class="fz16">'+
+											'1603期'+
+										'</p>'+
+										'<p>'+
+											'入职企业：深圳华夏通宝云知科技'+
+										'</p>'+
+										'<div class="center-block fz16 salary">'+
+											'月薪：16000'+
+										'</div>'+
+									'</li>'+
+									'<li>'+
+										'<img src="images3/st12.jpg" alt="" />'+
+										'<p>'+
+											'<span class="fz24">'+
+												'谭雪玲'+
+											'</span>'+
+											'<span class="fz16">'+
+												'（深圳罗湖中心）'+
+											'</span>'+
+										'</p>'+
+										'<p class="fz16">'+
+											'1603期'+
+										'</p>'+
+										'<p>'+
+											'入职企业：深圳华夏通宝云知科技'+
+										'</p>'+
+										'<div class="center-block fz16 salary">'+
+											'月薪：16000'+
+										'</div>'+
+									'</li>'+
+									'<div class="link clear pt30">'+
+										'<a href="javascript:;" class="hxsd-webim-click">'+
+											'立即报名'+
+										'</a>'+
+									'</div>'+
+								'</ul>'+
+							'</div>'
+			}
+		});
+
+		let bgt = new Vue({
+			el : '#bgtable',
+			data : {
+				bgt : 	'<div class="wrap">'+
+							'<h1 class="tit1" style="color: #2395ff; padding: 70px 0 40px;">'+
+								'让“薪情”飞扬 一个月挣回学费'+
+							'</h1>'+
+							'<p class="text-center pb20">'+
+								'火星时代Web前端+全栈工程师学员就业报告'+
+							'</p>'+
+							'<img src="images3/table.jpg" alt="" class="center-block pb40" />'+
+							'<div class="fl col-6">'+
+								'<div class="link">'+
+									'<a href="javascript:;" class="hxsd-webim-click">'+
+										'我要立即报名'+
+									'</a>'+
+								'</div>'+
+							'</div>'+
+							'<div class="fl col-6">'+
+								'<div class="link">'+
+									'<a href="javascript:;" class="hxsd-webim-click">'+
+										'查看更多薪资'+
+									'</a>'+
+								'</div>'+
+							'</div>'+
+						'</div>'
+			}
+		});
+
+		let bp = new Vue({
+			el : '#bgp',
+			data : {
+				bp : 	'<h1 class="text-center pt50 pb50">'+
+							'<img src="images3/titleby.png" alt="" />'+
+						'</h1>'+
+						'<div class="diving">'+
+							'<img src="images3/by.jpg" alt="" class="center-block" />'+
+						'</div>'+
+						'<h1 class="text-center pt50 pb50">'+
+							'<img src="images3/titlefn.png" alt="" />'+
+						'</h1>'+
+						'<div class="diving">'+
+							'<img src="images3/fn.jpg" alt="" class="center-block" />'+
+						'</div>'
+			}
+		});
+
+		let ftf = new Vue({
+			el : '#ftform',
+			data : {
+				ftf : 	'<div class="wrap">'+
+							'<div class="form fl">'+
+								'<h2 class="tit1" style="padding: 70px 0 40px;">'+
+									'每期开班座位有限，提前报名座位越靠前'+
+								'</h2>'+
+								'<div class="form2">'+
+									'<form class="middleform">'+
+										'<input type="text" class="name" placeholder="姓名"/>'+
+										'<input type="text" class="phone" placeholder="手机号"/>'+
+										'<input type="button" class="middlebutton" />'+
+									'</form>'+
+								'</div>'+
+							'</div>'+
+							'<img src="images3/form.jpg" alt="" class="fr"/>'+
+						'</div>'
+			}
+		});
+
+		new Vue({
+			el : '#bottom',
+			data : {
+				curId : 0
+			},
+			computed : {},
+			methods : {},
+			mounted : function () {}
+		});
+	</script>
+</body>
+</html>
